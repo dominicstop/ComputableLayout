@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '10.0'
+
+target 'ComputableLayout_Example' do
+  pod 'ComputableLayout', :path => '../'
+
+  target 'ComputableLayout_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

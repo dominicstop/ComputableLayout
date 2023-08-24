@@ -1,0 +1,16 @@
+PODS:
+  - ComputableLayout (0.1.0)
+
+DEPENDENCIES:
+  - ComputableLayout (from `../`)
+
+EXTERNAL SOURCES:
+  ComputableLayout:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ComputableLayout: 11ffc8e88329133d9e63701c6d02bba672490cf8
+
+PODFILE CHECKSUM: 5d61a116075d6f209b0ec2e3ec781eb4fb38a8e5
+
+COCOAPODS: 1.12.0

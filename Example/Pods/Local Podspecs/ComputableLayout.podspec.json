@@ -1,0 +1,22 @@
+{
+  "name": "ComputableLayout",
+  "version": "0.1.0",
+  "summary": "A short description of ComputableLayout.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/dominicstop@gmail.com/ComputableLayout",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "dominicstop@gmail.com": "18517029+dominicstop@users.noreply.github.com"
+  },
+  "source": {
+    "git": "https://github.com/dominicstop@gmail.com/ComputableLayout.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "source_files": "ComputableLayout/Classes/**/*"
+}
