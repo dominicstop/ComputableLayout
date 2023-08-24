@@ -21,7 +21,7 @@ public struct ComputableLayoutKeyboardValues {
   // MARK: - Computed Properties
   // ---------------------------
   
-  var keyboardAnimator: UIViewPropertyAnimator {
+  public var keyboardAnimator: UIViewPropertyAnimator {
     UIViewPropertyAnimator(
       duration: self.animationDuration,
       curve: self.animationCurve

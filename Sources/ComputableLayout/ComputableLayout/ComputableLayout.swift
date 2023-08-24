@@ -9,7 +9,7 @@ import UIKit
 
 public struct ComputableLayout: Equatable {
 
-  static let zero: Self = .init(
+  public static let zero: Self = .init(
     horizontalAlignment: .left,
     verticalAlignment: .top,
     width: .constant(0),
