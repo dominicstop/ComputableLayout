@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
-		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
+		607FACD81AFB9204008FA782 /* ComputableLayoutTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ComputableLayoutTestViewController.swift */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		8865403A2A97BEB3006FA9A5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886540392A97BEB3006FA9A5 /* SceneDelegate.swift */; };
+		8865403C2A97C37A006FA9A5 /* ComputaleLayoutTestPresets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8865403B2A97C37A006FA9A5 /* ComputaleLayoutTestPresets.swift */; };
 		BF8C9EF223D3291E9830274B /* Pods_ComputableLayout_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16A9854841BD67538565E379 /* Pods_ComputableLayout_Tests.framework */; };
 		F5B4EED3F91156D5894A5C09 /* Pods_ComputableLayout_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDAD40E95FDC9C48D133FB29 /* Pods_ComputableLayout_Example.framework */; };
 /* End PBXBuildFile section */
@@ -33,7 +34,7 @@
 		607FACD01AFB9204008FA782 /* ComputableLayout_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ComputableLayout_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		607FACD71AFB9204008FA782 /* ComputableLayoutTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComputableLayoutTestViewController.swift; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* ComputableLayout_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ComputableLayout_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -42,6 +43,7 @@
 		6C3F23DABA083BA9B1D4669E /* Pods-ComputableLayout_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ComputableLayout_Example.debug.xcconfig"; path = "Target Support Files/Pods-ComputableLayout_Example/Pods-ComputableLayout_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		724075D3FF0AE180F3BBC04F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		886540392A97BEB3006FA9A5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		8865403B2A97C37A006FA9A5 /* ComputaleLayoutTestPresets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComputaleLayoutTestPresets.swift; sourceTree = "<group>"; };
 		9A2707E96309C2583573C5C3 /* Pods-ComputableLayout_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ComputableLayout_Example.release.xcconfig"; path = "Target Support Files/Pods-ComputableLayout_Example/Pods-ComputableLayout_Example.release.xcconfig"; sourceTree = "<group>"; };
 		A90D3B1DE53282D124B0BB13 /* ComputableLayout.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ComputableLayout.podspec; path = ../ComputableLayout.podspec; sourceTree = "<group>"; };
 		BAD0D8788B640F4EF72740AD /* Pods-ComputableLayout_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ComputableLayout_Tests.release.xcconfig"; path = "Target Support Files/Pods-ComputableLayout_Tests/Pods-ComputableLayout_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -95,7 +97,8 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				886540392A97BEB3006FA9A5 /* SceneDelegate.swift */,
-				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				607FACD71AFB9204008FA782 /* ComputableLayoutTestViewController.swift */,
+				8865403B2A97C37A006FA9A5 /* ComputaleLayoutTestPresets.swift */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
@@ -332,8 +335,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				607FACD81AFB9204008FA782 /* ComputableLayoutTestViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				8865403C2A97C37A006FA9A5 /* ComputaleLayoutTestPresets.swift in Sources */,
 				8865403A2A97BEB3006FA9A5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
