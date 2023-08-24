@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'ComputableLayout'
-  s.version          = '0.3.0'
+  s.version          = '0.4.0'
   s.summary          = 'A config-based layout calculator.'
 
   s.homepage         = 'https://github.com/dominicstop/ComputableLayout'
