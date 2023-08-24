@@ -445,7 +445,8 @@ let ComputableLayoutTestPresets: [ComputableLayout] = [
     marginLeft: .constant(20),
     marginRight: .constant(20)
   ),
-  // 11 L
+  
+  // 35 - 11 L
   ComputableLayout(
     horizontalAlignment: .left,
     verticalAlignment: .center,
@@ -458,7 +459,7 @@ let ComputableLayoutTestPresets: [ComputableLayout] = [
     )
   ),
   
-  // 35 - 12 M
+  // 36 - 12 M
   ComputableLayout(
     horizontalAlignment: .right,
     verticalAlignment: .center,
@@ -471,7 +472,7 @@ let ComputableLayoutTestPresets: [ComputableLayout] = [
     )
   ),
   
-  // 36 - O = 13
+  // 37 - O = 13
   ComputableLayout(
     horizontalAlignment: .left,
     verticalAlignment: .center,
@@ -487,7 +488,7 @@ let ComputableLayoutTestPresets: [ComputableLayout] = [
     marginBottom: .constant(20)
   ),
   
-  // 37 - P
+  // 38 - P
   ComputableLayout(
     horizontalAlignment: .right,
     verticalAlignment: .center,
@@ -503,7 +504,7 @@ let ComputableLayoutTestPresets: [ComputableLayout] = [
     marginBottom: .constant(20)
   ),
   
-  // 38 - Q = 15
+  // 39 - Q = 15
   ComputableLayout(
     horizontalAlignment: .center,
     verticalAlignment: .bottom,
@@ -518,7 +519,7 @@ let ComputableLayoutTestPresets: [ComputableLayout] = [
     marginBottom: .constant(15)
   ),
   
-  // 39 - 16
+  // 40 - 16
   ComputableLayout(
     horizontalAlignment: .center,
     verticalAlignment: .top,
@@ -536,7 +537,7 @@ let ComputableLayoutTestPresets: [ComputableLayout] = [
   // MARK: Stretch + Safe Area
   // -------------------------
   
-  // 40 - Stretch + Safe Area
+  // 41 - Stretch + Safe Area
   ComputableLayout(
     horizontalAlignment: .center,
     verticalAlignment: .center,
@@ -548,7 +549,7 @@ let ComputableLayoutTestPresets: [ComputableLayout] = [
     marginBottom: .safeAreaInsets(insetKey: \.bottom)
   ),
   
-  // 41 - Stretch + Safe Area + Margins
+  // 42 - Stretch + Safe Area + Constant Margins
   ComputableLayout(
     horizontalAlignment: .center,
     verticalAlignment: .center,
@@ -570,5 +571,100 @@ let ComputableLayoutTestPresets: [ComputableLayout] = [
       .safeAreaInsets(insetKey: \.bottom),
       .constant(10),
     ])
+  ),
+  
+  // 43 - Stretch + Safe Area + Constant Percent
+  ComputableLayout(
+    horizontalAlignment: .center,
+    verticalAlignment: .center,
+    width: .stretch,
+    height: .stretch,
+    marginLeft: .multipleValues([
+      .safeAreaInsets(insetKey: \.left),
+      .percent(percentValue: 0.1),
+    ]),
+    marginRight: .multipleValues([
+      .safeAreaInsets(insetKey: \.right),
+      .percent(percentValue: 0.1),
+    ]),
+    marginTop: .multipleValues([
+      .safeAreaInsets(insetKey: \.top),
+      .percent(percentValue: 0.1),
+    ]),
+    marginBottom: .multipleValues([
+      .safeAreaInsets(insetKey: \.bottom),
+      .percent(percentValue: 0.1),
+    ])
+  ),
+  
+  // MARK: Percent Margins
+  // ---------------------
+  
+  // 44
+  ComputableLayout(
+    horizontalAlignment: .left,
+    verticalAlignment: .top,
+    width: .constant(125),
+    height: .constant(125),
+    marginLeft: .percent(percentValue: 0.1),
+    marginTop: .percent(percentValue: 0.1)
+  ),
+  
+  // 45
+  ComputableLayout(
+    horizontalAlignment: .left,
+    verticalAlignment: .top,
+    width: .constant(125),
+    height: .constant(125),
+    marginLeft: .multipleValues([
+      .safeAreaInsets(insetKey: \.left),
+      .percent(percentValue: 0.25),
+    ]),
+    marginTop: .multipleValues([
+      .safeAreaInsets(insetKey: \.top),
+      .percent(percentValue: 0.25),
+    ])
+  ),
+  
+  // 46
+  ComputableLayout(
+    horizontalAlignment: .left,
+    verticalAlignment: .top,
+    width: .constant(125),
+    height: .constant(125),
+    marginLeft: .multipleValues([
+      .safeAreaInsets(insetKey: \.left),
+      .percent(percentValue: 0.5),
+    ]),
+    marginTop: .multipleValues([
+      .safeAreaInsets(insetKey: \.top),
+      .percent(percentValue: 0.5),
+    ])
+  ),
+  
+  // 47
+  ComputableLayout(
+    horizontalAlignment: .left,
+    verticalAlignment: .top,
+    width: .constant(125),
+    height: .constant(125),
+    marginLeft: .multipleValues([
+      .safeAreaInsets(insetKey: \.left),
+      .percent(percentValue: 0.75),
+    ]),
+    marginTop: .multipleValues([
+      .safeAreaInsets(insetKey: \.top),
+      .percent(percentValue: 0.75),
+    ])
+  ),
+  
+  // 48
+  ComputableLayout(
+    horizontalAlignment: .left,
+    verticalAlignment: .top,
+    width: .constant(125),
+    height: .constant(125),
+    marginLeft: .percent(percentValue: 0.9),
+    marginTop: .percent(percentValue: 0.9)
   ),
 ];
