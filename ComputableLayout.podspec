@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name             = 'ComputableLayout'
   s.version          = '0.1.0'
-  s.summary          = 'TBA'
+  s.summary          = 'A config-based layout calculator.'
 
   s.homepage         = 'https://github.com/dominicstop/ComputableLayout'
   s.license          = { :type => 'MIT', :file => 'LICENSE.md' }
