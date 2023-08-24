@@ -1,22 +1,23 @@
 {
   "name": "ComputableLayout",
   "version": "0.1.0",
-  "summary": "A short description of ComputableLayout.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/dominicstop@gmail.com/ComputableLayout",
+  "summary": "TBA",
+  "homepage": "https://github.com/dominicstop/ComputableLayout",
   "license": {
     "type": "MIT",
-    "file": "LICENSE"
+    "file": "LICENSE.md"
   },
   "authors": {
-    "dominicstop@gmail.com": "18517029+dominicstop@users.noreply.github.com"
+    "Dominic Go": "dominic@dominicgo.dev"
   },
   "source": {
-    "git": "https://github.com/dominicstop@gmail.com/ComputableLayout.git",
+    "git": "https://github.com/dominicstop/ComputableLayout.git",
     "tag": "0.1.0"
   },
   "platforms": {
-    "ios": "10.0"
+    "ios": "11.0"
   },
-  "source_files": "ComputableLayout/Classes/**/*"
+  "swift_versions": "5.0",
+  "source_files": "Sources/ComputableLayout/**/*",
+  "swift_version": "5.0"
 }

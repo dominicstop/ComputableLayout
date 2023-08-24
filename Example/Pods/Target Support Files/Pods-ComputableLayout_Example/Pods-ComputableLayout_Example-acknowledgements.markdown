@@ -3,7 +3,7 @@ This application makes use of the following third party libraries:
 
 ## ComputableLayout
 
-Copyright (c) 2023 dominicstop@gmail.com <18517029+dominicstop@users.noreply.github.com>
+Copyright (c) 2023 Dominic Go
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

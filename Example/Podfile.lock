@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  ComputableLayout: 11ffc8e88329133d9e63701c6d02bba672490cf8
+  ComputableLayout: 46ac1d036772bd5642279a2d3daf7dc983126ef3
 
 PODFILE CHECKSUM: 5d61a116075d6f209b0ec2e3ec781eb4fb38a8e5
 
