@@ -9,7 +9,7 @@ import UIKit
 
 public struct EvaluableConditionContext: Equatable {
   
-  static var `default`: Self = .init(window: nil, targetView: nil);
+  public static var `default`: Self = .init(window: nil, targetView: nil);
 
   // MARK: - Properties
   // ------------------

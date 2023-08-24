@@ -12,7 +12,7 @@ public enum ComputableLayoutValueEvaluableCondition: Equatable {
   
   case keyboardPresent;
   
-  func evaluate(usingContext context: ComputableLayoutValueContext) -> Bool {
+  public func evaluate(usingContext context: ComputableLayoutValueContext) -> Bool {
     switch self {
       case let .isNilOrZero(layoutValueMode):
         let layoutValue = layoutValueMode.compute(
