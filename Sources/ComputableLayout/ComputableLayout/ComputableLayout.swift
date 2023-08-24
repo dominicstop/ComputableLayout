@@ -1,5 +1,5 @@
 //
-//  RNILayout.swift
+//  ComputableLayout.swift
 //  swift-programmatic-modal
 //
 //  Created by Dominic Go on 5/19/23.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-public struct RNILayout: Equatable {
+public struct ComputableLayout: Equatable {
 
   static let zero: Self = .init(
     horizontalAlignment: .left,
@@ -33,21 +33,21 @@ public struct RNILayout: Equatable {
   public let horizontalAlignment: HorizontalAlignment;
   public let verticalAlignment  : VerticalAlignment;
   
-  public let width : RNILayoutValue;
-  public let height: RNILayoutValue;
+  public let width : ComputableLayoutValue;
+  public let height: ComputableLayoutValue;
   
-  public let marginLeft  : RNILayoutValue?;
-  public let marginRight : RNILayoutValue?;
-  public let marginTop   : RNILayoutValue?;
-  public let marginBottom: RNILayoutValue?;
+  public let marginLeft  : ComputableLayoutValue?;
+  public let marginRight : ComputableLayoutValue?;
+  public let marginTop   : ComputableLayoutValue?;
+  public let marginBottom: ComputableLayoutValue?;
   
-  public let paddingLeft  : RNILayoutValue?;
-  public let paddingRight : RNILayoutValue?;
-  public let paddingTop   : RNILayoutValue?;
-  public let paddingBottom: RNILayoutValue?;
+  public let paddingLeft  : ComputableLayoutValue?;
+  public let paddingRight : ComputableLayoutValue?;
+  public let paddingTop   : ComputableLayoutValue?;
+  public let paddingBottom: ComputableLayoutValue?;
   
-  public let offsetX: RNILayoutValue?;
-  public let offsetY: RNILayoutValue?;
+  public let offsetX: ComputableLayoutValue?;
+  public let offsetY: ComputableLayoutValue?;
   
   // MARK: - Init
   // ------------
@@ -56,21 +56,21 @@ public struct RNILayout: Equatable {
     horizontalAlignment: HorizontalAlignment,
     verticalAlignment  : VerticalAlignment,
     
-    width : RNILayoutValue,
-    height: RNILayoutValue,
+    width : ComputableLayoutValue,
+    height: ComputableLayoutValue,
     
-    marginLeft  : RNILayoutValue? = nil,
-    marginRight : RNILayoutValue? = nil,
-    marginTop   : RNILayoutValue? = nil,
-    marginBottom: RNILayoutValue? = nil,
+    marginLeft  : ComputableLayoutValue? = nil,
+    marginRight : ComputableLayoutValue? = nil,
+    marginTop   : ComputableLayoutValue? = nil,
+    marginBottom: ComputableLayoutValue? = nil,
     
-    paddingLeft  : RNILayoutValue? = nil,
-    paddingRight : RNILayoutValue? = nil,
-    paddingTop   : RNILayoutValue? = nil,
-    paddingBottom: RNILayoutValue? = nil,
+    paddingLeft  : ComputableLayoutValue? = nil,
+    paddingRight : ComputableLayoutValue? = nil,
+    paddingTop   : ComputableLayoutValue? = nil,
+    paddingBottom: ComputableLayoutValue? = nil,
     
-    offsetX: RNILayoutValue? = nil,
-    offsetY: RNILayoutValue? = nil
+    offsetX: ComputableLayoutValue? = nil,
+    offsetY: ComputableLayoutValue? = nil
   ) {
     self.horizontalAlignment = horizontalAlignment;
     self.verticalAlignment   = verticalAlignment;
@@ -97,21 +97,21 @@ public struct RNILayout: Equatable {
     horizontalAlignment: HorizontalAlignment? = nil,
     verticalAlignment  : VerticalAlignment? = nil,
     
-    width : RNILayoutValue? = nil,
-    height: RNILayoutValue? = nil,
+    width : ComputableLayoutValue? = nil,
+    height: ComputableLayoutValue? = nil,
     
-    marginLeft  : RNILayoutValue? = nil,
-    marginRight : RNILayoutValue? = nil,
-    marginTop   : RNILayoutValue? = nil,
-    marginBottom: RNILayoutValue? = nil,
+    marginLeft  : ComputableLayoutValue? = nil,
+    marginRight : ComputableLayoutValue? = nil,
+    marginTop   : ComputableLayoutValue? = nil,
+    marginBottom: ComputableLayoutValue? = nil,
     
-    paddingLeft  : RNILayoutValue? = nil,
-    paddingRight : RNILayoutValue? = nil,
-    paddingTop   : RNILayoutValue? = nil,
-    paddingBottom: RNILayoutValue? = nil,
+    paddingLeft  : ComputableLayoutValue? = nil,
+    paddingRight : ComputableLayoutValue? = nil,
+    paddingTop   : ComputableLayoutValue? = nil,
+    paddingBottom: ComputableLayoutValue? = nil,
     
-    offsetX: RNILayoutValue? = nil,
-    offsetY: RNILayoutValue? = nil
+    offsetX: ComputableLayoutValue? = nil,
+    offsetY: ComputableLayoutValue? = nil
   ) {
     self.horizontalAlignment = horizontalAlignment ?? prev.horizontalAlignment;
     self.verticalAlignment   = verticalAlignment   ?? prev.verticalAlignment;
@@ -135,10 +135,10 @@ public struct RNILayout: Equatable {
   
   public init(
     rect: CGRect,
-    paddingLeft  : RNILayoutValue? = nil,
-    paddingRight : RNILayoutValue? = nil,
-    paddingTop   : RNILayoutValue? = nil,
-    paddingBottom: RNILayoutValue? = nil
+    paddingLeft  : ComputableLayoutValue? = nil,
+    paddingRight : ComputableLayoutValue? = nil,
+    paddingTop   : ComputableLayoutValue? = nil,
+    paddingBottom: ComputableLayoutValue? = nil
   ){
     self.horizontalAlignment = .left;
     self.verticalAlignment   = .top;
@@ -167,7 +167,7 @@ public struct RNILayout: Equatable {
   /// * Rect with the computed size based on `size` config.
   ///
   public func computeRawRectSize(
-    usingLayoutValueContext context: RNILayoutValueContext
+    usingLayoutValueContext context: ComputableLayoutValueContext
   ) -> CGSize {
   
     let computedWidth = self.width.computeValue(
@@ -191,7 +191,7 @@ public struct RNILayout: Equatable {
   ///   `verticalAlignment` config.
   ///
   public func computeRawRectOrigin(
-    usingLayoutValueContext context: RNILayoutValueContext,
+    usingLayoutValueContext context: ComputableLayoutValueContext,
     forRect rect: CGRect? = nil,
     ignoreXAxis: Bool = false,
     ignoreYAxis: Bool = false
@@ -245,26 +245,26 @@ public struct RNILayout: Equatable {
   /// * Rect with margins applied to it based on the margin-related properties
   ///
   public func computeRect(
-    usingLayoutValueContext baseContext: RNILayoutValueContext
+    usingLayoutValueContext baseContext: ComputableLayoutValueContext
   ) -> CGRect {
   
     let computedSize = self.computeRawRectSize(
       usingLayoutValueContext: baseContext
     );
     
-    let context = RNILayoutValueContext(
+    let context = ComputableLayoutValueContext(
       derivedFrom: baseContext,
       currentSize: computedSize
     );
   
     var rect = self.computeRawRectOrigin(usingLayoutValueContext: context);
     
-    let computedMargins = RNILayoutMargins(
+    let computedMargins = ComputableLayoutMargins(
       usingLayoutConfig: self,
       usingLayoutValueContext: context
     );
     
-    let marginRects = RNILayoutMarginRects(
+    let marginRects = ComputableLayoutMarginRects(
       margins: computedMargins,
       viewRect: rect,
       targetRect: context.targetRect
@@ -460,7 +460,7 @@ public struct RNILayout: Equatable {
   };
   
   public func computePadding(
-    usingLayoutValueContext context: RNILayoutValueContext
+    usingLayoutValueContext context: ComputableLayoutValueContext
   ) -> UIEdgeInsets {
   
     let paddingLeft = self.paddingLeft?.computeValue(

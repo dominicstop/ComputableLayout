@@ -1,5 +1,5 @@
 //
-//  RNILayoutValue+StaticInit.swift
+//  ComputableLayoutValue+StaticInit.swift
 //  swift-programmatic-modal
 //
 //  Created by Dominic Go on 6/19/23.
@@ -7,15 +7,15 @@
 
 import UIKit
 
-public extension RNILayoutValue {
+public extension ComputableLayoutValue {
  
   static let stretch: Self = .init(mode: .stretch);
   
   static func stretch(
-    offsetValue: RNILayoutValueMode? = nil,
-    offsetOperation: RNILayoutComputableOffset.OffsetOperation? = nil,
-    minValue: RNILayoutValueMode? = nil,
-    maxValue: RNILayoutValueMode? = nil
+    offsetValue: ComputableLayoutValueMode? = nil,
+    offsetOperation: ComputableLayoutOffset.OffsetOperation? = nil,
+    minValue: ComputableLayoutValueMode? = nil,
+    maxValue: ComputableLayoutValueMode? = nil
   ) -> Self {
   
     return .init(
@@ -32,12 +32,12 @@ public extension RNILayoutValue {
   };
   
   static func percent(
-    relativeTo: RNILayoutValuePercentTarget = .targetSize,
+    relativeTo: ComputableLayoutValuePercentTarget = .targetSize,
     percentValue: Double,
-    offsetValue: RNILayoutValueMode? = nil,
-    offsetOperation: RNILayoutComputableOffset.OffsetOperation? = nil,
-    minValue: RNILayoutValueMode? = nil,
-    maxValue: RNILayoutValueMode? = nil
+    offsetValue: ComputableLayoutValueMode? = nil,
+    offsetOperation: ComputableLayoutOffset.OffsetOperation? = nil,
+    minValue: ComputableLayoutValueMode? = nil,
+    maxValue: ComputableLayoutValueMode? = nil
   ) -> Self {
   
     return .init(
@@ -54,10 +54,10 @@ public extension RNILayoutValue {
   
   static func safeAreaInsets(
     insetKey: KeyPath<UIEdgeInsets, CGFloat>,
-    offsetValue: RNILayoutValueMode? = nil,
-    offsetOperation: RNILayoutComputableOffset.OffsetOperation? = nil,
-    minValue: RNILayoutValueMode? = nil,
-    maxValue: RNILayoutValueMode? = nil
+    offsetValue: ComputableLayoutValueMode? = nil,
+    offsetOperation: ComputableLayoutOffset.OffsetOperation? = nil,
+    minValue: ComputableLayoutValueMode? = nil,
+    maxValue: ComputableLayoutValueMode? = nil
   ) -> Self {
   
     return .init(
@@ -71,10 +71,10 @@ public extension RNILayoutValue {
   
   static func keyboardScreenRect(
     rectKey: KeyPath<CGRect, CGFloat>,
-    offsetValue: RNILayoutValueMode? = nil,
-    offsetOperation: RNILayoutComputableOffset.OffsetOperation? = nil,
-    minValue: RNILayoutValueMode? = nil,
-    maxValue: RNILayoutValueMode? = nil
+    offsetValue: ComputableLayoutValueMode? = nil,
+    offsetOperation: ComputableLayoutOffset.OffsetOperation? = nil,
+    minValue: ComputableLayoutValueMode? = nil,
+    maxValue: ComputableLayoutValueMode? = nil
   ) -> Self {
   
     return .init(
@@ -88,10 +88,10 @@ public extension RNILayoutValue {
   
   static func keyboardRelativeSize(
     sizeKey: KeyPath<CGSize, CGFloat>,
-    offsetValue: RNILayoutValueMode? = nil,
-    offsetOperation: RNILayoutComputableOffset.OffsetOperation? = nil,
-    minValue: RNILayoutValueMode? = nil,
-    maxValue: RNILayoutValueMode? = nil
+    offsetValue: ComputableLayoutValueMode? = nil,
+    offsetOperation: ComputableLayoutOffset.OffsetOperation? = nil,
+    minValue: ComputableLayoutValueMode? = nil,
+    maxValue: ComputableLayoutValueMode? = nil
   ) -> Self {
   
     return .init(
@@ -104,11 +104,11 @@ public extension RNILayoutValue {
   };
   
   static func multipleValues(
-    _ values: [RNILayoutValueMode],
-    offsetValue: RNILayoutValueMode? = nil,
-    offsetOperation: RNILayoutComputableOffset.OffsetOperation? = nil,
-    minValue: RNILayoutValueMode? = nil,
-    maxValue: RNILayoutValueMode? = nil
+    _ values: [ComputableLayoutValueMode],
+    offsetValue: ComputableLayoutValueMode? = nil,
+    offsetOperation: ComputableLayoutOffset.OffsetOperation? = nil,
+    minValue: ComputableLayoutValueMode? = nil,
+    maxValue: ComputableLayoutValueMode? = nil
   ) -> Self {
   
     return .init(
@@ -121,13 +121,13 @@ public extension RNILayoutValue {
   };
   
   static func conditionalLayoutValue(
-    condition: RNILayoutValueEvaluableCondition,
-    trueValue: RNILayoutValueMode?,
-    falseValue: RNILayoutValueMode? = nil,
-    offsetValue: RNILayoutValueMode? = nil,
-    offsetOperation: RNILayoutComputableOffset.OffsetOperation? = nil,
-    minValue: RNILayoutValueMode? = nil,
-    maxValue: RNILayoutValueMode? = nil
+    condition: ComputableLayoutValueEvaluableCondition,
+    trueValue: ComputableLayoutValueMode?,
+    falseValue: ComputableLayoutValueMode? = nil,
+    offsetValue: ComputableLayoutValueMode? = nil,
+    offsetOperation: ComputableLayoutOffset.OffsetOperation? = nil,
+    minValue: ComputableLayoutValueMode? = nil,
+    maxValue: ComputableLayoutValueMode? = nil
   ) -> Self {
   
     return .init(
@@ -144,13 +144,13 @@ public extension RNILayoutValue {
   };
   
   static func conditionalValue(
-    condition: RNILayoutEvaluableCondition,
-    trueValue: RNILayoutValueMode?,
-    falseValue: RNILayoutValueMode? = nil,
-    offsetValue: RNILayoutValueMode? = nil,
-    offsetOperation: RNILayoutComputableOffset.OffsetOperation? = nil,
-    minValue: RNILayoutValueMode? = nil,
-    maxValue: RNILayoutValueMode? = nil
+    condition: EvaluableCondition,
+    trueValue: ComputableLayoutValueMode?,
+    falseValue: ComputableLayoutValueMode? = nil,
+    offsetValue: ComputableLayoutValueMode? = nil,
+    offsetOperation: ComputableLayoutOffset.OffsetOperation? = nil,
+    minValue: ComputableLayoutValueMode? = nil,
+    maxValue: ComputableLayoutValueMode? = nil
   ) -> Self {
   
     return .init(

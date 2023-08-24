@@ -1,5 +1,5 @@
 //
-//  RNILayoutEvaluableCondition.swift
+//  ComputableLayoutEvaluableCondition.swift
 //  
 //
 //  Created by Dominic Go on 7/28/23.
@@ -8,7 +8,7 @@
 import UIKit
 
 
-public indirect enum RNILayoutEvaluableCondition: Equatable {
+public indirect enum EvaluableCondition: Equatable {
 
   // MARK: - Embedded Types
   // ----------------------
@@ -21,7 +21,7 @@ public indirect enum RNILayoutEvaluableCondition: Equatable {
     case custom(CGRect);
     
     public func evaluate(
-      usingContext context: RNILayoutEvaluableConditionContext,
+      usingContext context: EvaluableConditionContext,
       forKey key: KeyPath<CGRect, CGFloat>,
       condition: NumericLogicalExpression<CGFloat>
     ) -> Bool {
@@ -55,7 +55,7 @@ public indirect enum RNILayoutEvaluableCondition: Equatable {
     case custom(CGSize);
     
     func evaluate(
-      usingContext context: RNILayoutEvaluableConditionContext,
+      usingContext context: EvaluableConditionContext,
       forKey key: KeyPath<CGSize, CGFloat>,
       condition: NumericLogicalExpression<CGFloat>
     ) -> Bool {
@@ -219,7 +219,7 @@ public indirect enum RNILayoutEvaluableCondition: Equatable {
 
   case layoutDirection(is: UITraitEnvironmentLayoutDirection);
 
-  case isFlagTrue(forKey: KeyPath<RNILayoutEvaluableConditionContext, Bool>);
+  case isFlagTrue(forKey: KeyPath<EvaluableConditionContext, Bool>);
 
   case deviceFlags(forKey: KeyPath<UIDevice, Bool>);
 
@@ -242,7 +242,7 @@ public indirect enum RNILayoutEvaluableCondition: Equatable {
   // -----------------
   
   public func evaluate(
-    usingContext context: RNILayoutEvaluableConditionContext
+    usingContext context: EvaluableConditionContext
   ) -> Bool {
   
     switch self {

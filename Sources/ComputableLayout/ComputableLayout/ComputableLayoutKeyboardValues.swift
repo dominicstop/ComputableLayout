@@ -1,5 +1,5 @@
 //
-//  RNILayoutKeyboardValues.swift
+//  ComputableLayoutKeyboardValues.swift
 //  swift-programmatic-modal
 //
 //  Created by Dominic Go on 6/21/23.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-public struct RNILayoutKeyboardValues {
+public struct ComputableLayoutKeyboardValues {
 
   // MARK: - Properties
   // ------------------
@@ -53,7 +53,7 @@ public struct RNILayoutKeyboardValues {
 // MARK: - Init
 // ------------
 
-public extension RNILayoutKeyboardValues {
+public extension ComputableLayoutKeyboardValues {
 
   init?(fromNotification notification: NSNotification) {
     guard let userInfo = notification.userInfo else { return nil };

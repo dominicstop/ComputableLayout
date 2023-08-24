@@ -1,5 +1,5 @@
 //
-//  RNILayoutValue.swift
+//  ComputableLayoutValue.swift
 //  swift-programmatic-modal
 //
 //  Created by Dominic Go on 6/8/23.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-public struct RNILayoutValue: Equatable {
+public struct ComputableLayoutValue: Equatable {
 
   // MARK: - Types
   // -------------
@@ -19,23 +19,23 @@ public struct RNILayoutValue: Equatable {
   // MARK: - Properties
   // ------------------
   
-  public let mode: RNILayoutValueMode;
+  public let mode: ComputableLayoutValueMode;
   
-  public let offsetValue: RNILayoutValueMode?;
-  public let offsetOperation: RNILayoutComputableOffset.OffsetOperation?;
+  public let offsetValue: ComputableLayoutValueMode?;
+  public let offsetOperation: ComputableLayoutOffset.OffsetOperation?;
 
-  public let minValue: RNILayoutValueMode?;
-  public let maxValue: RNILayoutValueMode?;
+  public let minValue: ComputableLayoutValueMode?;
+  public let maxValue: ComputableLayoutValueMode?;
   
   // MARK: - Init
   // ------------
   
   public init(
-    mode: RNILayoutValueMode,
-    offsetValue: RNILayoutValueMode? = nil,
-    offsetOperation: RNILayoutComputableOffset.OffsetOperation? = nil,
-    minValue: RNILayoutValueMode? = nil,
-    maxValue: RNILayoutValueMode? = nil
+    mode: ComputableLayoutValueMode,
+    offsetValue: ComputableLayoutValueMode? = nil,
+    offsetOperation: ComputableLayoutOffset.OffsetOperation? = nil,
+    minValue: ComputableLayoutValueMode? = nil,
+    maxValue: ComputableLayoutValueMode? = nil
   ) {
     self.mode = mode;
     
@@ -49,7 +49,7 @@ public struct RNILayoutValue: Equatable {
   // ------------------------------
   
   public func applyOffsets(
-    usingLayoutValueContext context: RNILayoutValueContext,
+    usingLayoutValueContext context: ComputableLayoutValueContext,
     toValue value: CGFloat
   ) -> CGFloat? {
     guard let offsetValue = self.offsetValue else { return value };
@@ -61,7 +61,7 @@ public struct RNILayoutValue: Equatable {
     
     guard let computedOffsetValue = computedOffsetValue else { return value };
     
-    let computableOffset = RNILayoutComputableOffset(
+    let computableOffset = ComputableLayoutOffset(
       offset: computedOffsetValue,
       offsetOperation: self.offsetOperation ?? .add
     );
@@ -70,7 +70,7 @@ public struct RNILayoutValue: Equatable {
   };
   
   public func clampValue(
-    usingLayoutValueContext context: RNILayoutValueContext,
+    usingLayoutValueContext context: ComputableLayoutValueContext,
     forValue value: CGFloat
   ) -> CGFloat? {
   
@@ -90,7 +90,7 @@ public struct RNILayoutValue: Equatable {
   };
   
   public func computeRawValue(
-    usingLayoutValueContext context: RNILayoutValueContext,
+    usingLayoutValueContext context: ComputableLayoutValueContext,
     preferredSizeKey: KeyPath<CGSize, CGFloat>?
   ) -> CGFloat? {
   
@@ -104,7 +104,7 @@ public struct RNILayoutValue: Equatable {
   // ------------------------------
   
   public func computeValue(
-    usingLayoutValueContext context: RNILayoutValueContext,
+    usingLayoutValueContext context: ComputableLayoutValueContext,
     preferredSizeKey: KeyPath<CGSize, CGFloat>?
   ) -> CGFloat? {
   

@@ -1,5 +1,5 @@
 //
-//  RNILayoutPreset.swift
+//  ComputableLayoutPreset.swift
 //  swift-programmatic-modal
 //
 //  Created by Dominic Go on 5/23/23.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-public enum RNILayoutPreset: Equatable {
+public enum ComputableLayoutPreset: Equatable {
 
   case automatic;
 
@@ -32,14 +32,14 @@ public enum RNILayoutPreset: Equatable {
        
   case center;
   
-  case layoutConfig(_ config: RNILayout);
+  case layoutConfig(_ config: ComputableLayout);
   
   // MARK: Functions
   // ---------------
   
   public func getLayoutConfig(
-    fromBaseLayoutConfig baseLayoutConfig: RNILayout
-  ) -> RNILayout {
+    fromBaseLayoutConfig baseLayoutConfig: ComputableLayout
+  ) -> ComputableLayout {
   
     switch self {
       case .automatic:
@@ -171,10 +171,10 @@ public enum RNILayoutPreset: Equatable {
           derivedFrom: baseLayoutConfig,
           horizontalAlignment: .center,
           verticalAlignment: .center,
-          width: RNILayoutValue(
+          width: ComputableLayoutValue(
             mode: .stretch
           ),
-          height: RNILayoutValue(
+          height: ComputableLayoutValue(
             mode: .stretch
           ),
           marginLeft: .constant(0),
@@ -186,7 +186,7 @@ public enum RNILayoutPreset: Equatable {
       case .fitScreenHorizontally:
         return .init(
           derivedFrom: baseLayoutConfig,
-          width: RNILayoutValue(
+          width: ComputableLayoutValue(
             mode: .stretch
           ),
           marginLeft: .constant(0),
@@ -196,7 +196,7 @@ public enum RNILayoutPreset: Equatable {
       case .fitScreenVertically:
         return .init(
           derivedFrom: baseLayoutConfig,
-          height: RNILayoutValue(
+          height: ComputableLayoutValue(
             mode: .stretch
           ),
           marginTop: .constant(0)

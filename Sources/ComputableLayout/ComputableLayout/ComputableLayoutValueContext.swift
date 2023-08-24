@@ -1,5 +1,5 @@
 //
-//  RNILayoutValueContext.swift
+//  ComputableLayoutValueContext.swift
 //  swift-programmatic-modal
 //
 //  Created by Dominic Go on 6/9/23.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-public struct RNILayoutValueContext {
+public struct ComputableLayoutValueContext {
 
   public static let `default`: Self = .init(
     evaluableConditionContext: .default,
@@ -19,7 +19,7 @@ public struct RNILayoutValueContext {
     keyboardRelativeSize: nil
   );
   
-  public let evaluableConditionContext: RNILayoutEvaluableConditionContext;
+  public let evaluableConditionContext: EvaluableConditionContext;
 
   public let targetRect: CGRect;
 
@@ -43,7 +43,7 @@ public struct RNILayoutValueContext {
 // MARK: - Init
 // ------------
 
-public extension RNILayoutValueContext {
+public extension ComputableLayoutValueContext {
 
   init(
     derivedFrom prev: Self,
@@ -52,7 +52,7 @@ public extension RNILayoutValueContext {
     windowSize: CGSize? = nil,
     currentSize: CGSize? = nil,
     safeAreaInsets: UIEdgeInsets? = nil,
-    keyboardValues: RNILayoutKeyboardValues? = nil
+    keyboardValues: ComputableLayoutKeyboardValues? = nil
   ) {
     
     self.targetRect  = targetRect  ?? prev.targetRect;
@@ -77,7 +77,7 @@ public extension RNILayoutValueContext {
     }();
     
     self.evaluableConditionContext = {
-      let next = RNILayoutEvaluableConditionContext(
+      let next = EvaluableConditionContext(
         window: targetView?.window,
         targetView: targetView
       );
@@ -91,7 +91,7 @@ public extension RNILayoutValueContext {
   
   init?(
     fromTargetViewController targetVC: UIViewController,
-    keyboardValues: RNILayoutKeyboardValues? = nil,
+    keyboardValues: ComputableLayoutKeyboardValues? = nil,
     currentSize: CGSize? = nil
   ) {
     guard let targetView = targetVC.view else { return nil };
@@ -115,7 +115,7 @@ public extension RNILayoutValueContext {
   
   init?(
     fromTargetView targetView: UIView,
-    keyboardValues: RNILayoutKeyboardValues? = nil,
+    keyboardValues: ComputableLayoutKeyboardValues? = nil,
     currentSize: CGSize? = nil
   ) {
     self.targetRect = targetView.frame;

@@ -1,5 +1,5 @@
 //
-//  RNILayoutMarginRects.swift
+//  ComputableLayoutMarginRects.swift
 //  swift-programmatic-modal
 //
 //  Created by Dominic Go on 6/22/23.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct RNILayoutMarginRects {
+public struct ComputableLayoutMarginRects {
 
   var left  : CGRect;
   var right : CGRect;
@@ -15,7 +15,7 @@ public struct RNILayoutMarginRects {
   var bottom: CGRect;
   
   init(
-    margins: RNILayoutMargins,
+    margins: ComputableLayoutMargins,
     viewRect: CGRect,
     targetRect: CGRect
   ) {

@@ -1,5 +1,5 @@
 //
-//  RNILayoutMargin.swift
+//  ComputableLayoutMargin.swift
 //  swift-programmatic-modal
 //
 //  Created by Dominic Go on 6/22/23.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct RNILayoutMargins {
+public struct ComputableLayoutMargins {
   public var left  : CGFloat;
   public var right : CGFloat;
   public var top   : CGFloat;
@@ -42,11 +42,11 @@ public struct RNILayoutMargins {
   }
 };
 
-public extension RNILayoutMargins {
+public extension ComputableLayoutMargins {
 
   init(
-    usingLayoutConfig layoutConfig: RNILayout,
-    usingLayoutValueContext context: RNILayoutValueContext
+    usingLayoutConfig layoutConfig: ComputableLayout,
+    usingLayoutValueContext context: ComputableLayoutValueContext
   ) {
     self.left = layoutConfig.marginLeft?.computeValue(
       usingLayoutValueContext: context,

@@ -1,18 +1,18 @@
 //
-//  RNILayoutConditionalValueMode.swift
+//  ComputableLayoutValueEvaluableCondition.swift
 //
 //  Created by Dominic Go on 6/24/23.
 //
 
 import Foundation
 
-public enum RNILayoutValueEvaluableCondition: Equatable {
+public enum ComputableLayoutValueEvaluableCondition: Equatable {
 
-  case isNilOrZero(_ value: RNILayoutValueMode);
+  case isNilOrZero(_ value: ComputableLayoutValueMode);
   
   case keyboardPresent;
   
-  func evaluate(usingContext context: RNILayoutValueContext) -> Bool {
+  func evaluate(usingContext context: ComputableLayoutValueContext) -> Bool {
     switch self {
       case let .isNilOrZero(layoutValueMode):
         let layoutValue = layoutValueMode.compute(

@@ -1,5 +1,5 @@
 //
-//  RNILayoutValuePercentTarget.swift
+//  ComputableLayoutValuePercentTarget.swift
 //  swift-programmatic-modal
 //
 //  Created by Dominic Go on 6/8/23.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-public enum RNILayoutValuePercentTarget {
+public enum ComputableLayoutValuePercentTarget {
 
   case screenSize , screenWidth , screenHeight;
   case windowSize , windowWidth , windowHeight;
@@ -15,7 +15,7 @@ public enum RNILayoutValuePercentTarget {
   case currentSize, currentWidth, currentHeight;
   
   public func getValue(
-    layoutValueContext context: RNILayoutValueContext,
+    layoutValueContext context: ComputableLayoutValueContext,
     preferredSizeKey: KeyPath<CGSize, CGFloat>?
   ) -> CGFloat? {
   

@@ -1,5 +1,5 @@
 //
-//  RNILayoutEvaluableConditionContext.swift
+//  ComputableLayoutEvaluableConditionContext.swift
 //  
 //
 //  Created by Dominic Go on 7/31/23.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-public struct RNILayoutEvaluableConditionContext: Equatable {
+public struct EvaluableConditionContext: Equatable {
   
   static var `default`: Self = .init(window: nil, targetView: nil);
 
@@ -36,13 +36,13 @@ public struct RNILayoutEvaluableConditionContext: Equatable {
   public var verticalSizeClass: UIUserInterfaceSizeClass?;
   
   public var interfaceStyle:
-    RNILayoutEvaluableCondition.UserInterfaceStyle;
+    EvaluableCondition.UserInterfaceStyle;
     
   public var interfaceLevel:
-    RNILayoutEvaluableCondition.UserInterfaceLevel;
+    EvaluableCondition.UserInterfaceLevel;
     
   public var activeAppearance:
-    RNILayoutEvaluableCondition.UserInterfaceActiveAppearance?;
+    EvaluableCondition.UserInterfaceActiveAppearance?;
   
   public var layoutDirection: UITraitEnvironmentLayoutDirection;
   
@@ -147,7 +147,7 @@ public struct RNILayoutEvaluableConditionContext: Equatable {
 // MARK: - Extension - Init
 // ------------------------
 
-public extension RNILayoutEvaluableConditionContext {
+public extension EvaluableConditionContext {
 
   init(
     window: UIWindow?,

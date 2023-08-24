@@ -1,5 +1,5 @@
 //
-//  RNILayoutComputableOffset.swift
+//  ComputableLayoutComputableOffset.swift
 //  adaptive-modal
 //
 //  Created by Dominic Go on 6/22/23.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct RNILayoutComputableOffset {
+public struct ComputableLayoutOffset {
 
   public enum OffsetOperation: String {
     case multiply, divide, add, subtract;

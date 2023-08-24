@@ -1,5 +1,5 @@
 //
-//  RNILayoutValueMode.swift
+//  ComputableLayoutValueMode.swift
 //  swift-programmatic-modal
 //
 //  Created by Dominic Go on 6/8/23.
@@ -7,14 +7,14 @@
 
 import UIKit
 
-public indirect enum RNILayoutValueMode: Equatable {
+public indirect enum ComputableLayoutValueMode: Equatable {
 
   case stretch;
   
   case constant(_: CGFloat);
   
   case percent(
-    relativeTo: RNILayoutValuePercentTarget = .targetSize,
+    relativeTo: ComputableLayoutValuePercentTarget = .targetSize,
     percentValue: Double
   );
   
@@ -33,13 +33,13 @@ public indirect enum RNILayoutValueMode: Equatable {
   case multipleValues(_ values: [Self]);
   
   case conditionalLayoutValue(
-    condition: RNILayoutValueEvaluableCondition,
+    condition: ComputableLayoutValueEvaluableCondition,
     trueValue: Self?,
     falseValue: Self? = nil
   );
   
   case conditionalValue(
-    condition: RNILayoutEvaluableCondition,
+    condition: EvaluableCondition,
     trueValue: Self?,
     falseValue: Self? = nil
   );
@@ -48,7 +48,7 @@ public indirect enum RNILayoutValueMode: Equatable {
   // ---------------
   
   public func compute(
-    usingLayoutValueContext context: RNILayoutValueContext,
+    usingLayoutValueContext context: ComputableLayoutValueContext,
     preferredSizeKey: KeyPath<CGSize, CGFloat>? = nil
   ) -> CGFloat? {
   
