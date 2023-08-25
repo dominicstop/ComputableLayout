@@ -3,9 +3,6 @@
 A config-based layout calculator.
 
 ![ComputaleLayoutTestPresets](./Assets/2023-08-25-ComputaleLayoutTestPresets-02.gif)
-https://github.com/dominicstop/ComputableLayout/assets/18517029/5275324b-0ab0-4ca0-85b9-7898020f44b7
-
-
 
 <br><br>
 
