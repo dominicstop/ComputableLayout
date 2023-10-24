@@ -1,7 +1,6 @@
 use_frameworks!
 
-# Uncomment the next line to define a global platform for your project
-# platform :ios, '13.0'
+platform :ios, '13.0'
 
 target 'ComputableLayoutExample' do
   pod 'ComputableLayout', :path => '../'
