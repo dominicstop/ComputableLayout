@@ -1,15 +1,22 @@
 PODS:
-  - ComputableLayout (0.4.0)
+  - ComputableLayout (0.4.0):
+    - DGSwiftUtilities (~> 0)
+  - DGSwiftUtilities (0.1.0)
 
 DEPENDENCIES:
   - ComputableLayout (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - DGSwiftUtilities
 
 EXTERNAL SOURCES:
   ComputableLayout:
     :path: "../"
 
 SPEC CHECKSUMS:
-  ComputableLayout: 503234a5c7f4139013059d9f5bc2c06c81ec0fa0
+  ComputableLayout: 6c3b24edd76d1ecf6bd3a6809a2430ad077c13a2
+  DGSwiftUtilities: e04f2c8a6782592c09be299c411749ebfc4b1cc2
 
 PODFILE CHECKSUM: df6204c0da7913c4829e545f6f60d8c2e679db65
 
