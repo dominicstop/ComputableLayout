@@ -14,6 +14,7 @@
 		88987C432AE7665A0020D7C6 /* ComputableLayoutTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88987C402AE7665A0020D7C6 /* ComputableLayoutTestViewController.swift */; };
 		88987C442AE7665A0020D7C6 /* ComputaleLayoutTestPresets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88987C412AE7665A0020D7C6 /* ComputaleLayoutTestPresets.swift */; };
 		88987C452AE7665A0020D7C6 /* ViewControllerBasicUsage01.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88987C422AE7665A0020D7C6 /* ViewControllerBasicUsage01.swift */; };
+		88987C492AE7672F0020D7C6 /* ComputableLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 88987C482AE7672F0020D7C6 /* ComputableLayout */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		88987C402AE7665A0020D7C6 /* ComputableLayoutTestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComputableLayoutTestViewController.swift; sourceTree = "<group>"; };
 		88987C412AE7665A0020D7C6 /* ComputaleLayoutTestPresets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComputaleLayoutTestPresets.swift; sourceTree = "<group>"; };
 		88987C422AE7665A0020D7C6 /* ViewControllerBasicUsage01.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerBasicUsage01.swift; sourceTree = "<group>"; };
+		88987C462AE766F20020D7C6 /* ComputableLayout */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = ComputableLayout; path = ..; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88987C492AE7672F0020D7C6 /* ComputableLayout in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,9 +45,11 @@
 		88987C0A2AE7645E0020D7C6 = {
 			isa = PBXGroup;
 			children = (
+				88987C462AE766F20020D7C6 /* ComputableLayout */,
 				88987C3F2AE7665A0020D7C6 /* Examples */,
 				88987C152AE7645E0020D7C6 /* ComputableLayoutExample */,
 				88987C142AE7645E0020D7C6 /* Products */,
+				88987C472AE7672F0020D7C6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,6 +83,13 @@
 			path = Examples;
 			sourceTree = "<group>";
 		};
+		88987C472AE7672F0020D7C6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -94,6 +106,9 @@
 			dependencies = (
 			);
 			name = ComputableLayoutExample;
+			packageProductDependencies = (
+				88987C482AE7672F0020D7C6 /* ComputableLayout */,
+			);
 			productName = ComputableLayoutExample;
 			productReference = 88987C132AE7645E0020D7C6 /* ComputableLayoutExample.app */;
 			productType = "com.apple.product-type.application";
@@ -371,6 +386,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		88987C482AE7672F0020D7C6 /* ComputableLayout */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ComputableLayout;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 88987C0B2AE7645E0020D7C6 /* Project object */;
 }
