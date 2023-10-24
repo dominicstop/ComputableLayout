@@ -10,9 +10,11 @@
 		82841ACFECEE57FBEEC9EABB /* Pods_ComputableLayoutExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C1340668E015E57A7655F26 /* Pods_ComputableLayoutExample.framework */; };
 		88987BF72AE75B620020D7C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88987BF62AE75B620020D7C6 /* AppDelegate.swift */; };
 		88987BF92AE75B620020D7C6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88987BF82AE75B620020D7C6 /* SceneDelegate.swift */; };
-		88987BFB2AE75B620020D7C6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88987BFA2AE75B620020D7C6 /* ViewController.swift */; };
 		88987C002AE75B640020D7C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88987BFF2AE75B640020D7C6 /* Assets.xcassets */; };
 		88987C032AE75B640020D7C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88987C012AE75B640020D7C6 /* LaunchScreen.storyboard */; };
+		88987C4E2AE769380020D7C6 /* ComputableLayoutTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88987C4B2AE769380020D7C6 /* ComputableLayoutTestViewController.swift */; };
+		88987C4F2AE769380020D7C6 /* ComputaleLayoutTestPresets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88987C4C2AE769380020D7C6 /* ComputaleLayoutTestPresets.swift */; };
+		88987C502AE769380020D7C6 /* ViewControllerBasicUsage01.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88987C4D2AE769380020D7C6 /* ViewControllerBasicUsage01.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,10 +22,12 @@
 		88987BF32AE75B620020D7C6 /* ComputableLayoutExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ComputableLayoutExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88987BF62AE75B620020D7C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88987BF82AE75B620020D7C6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		88987BFA2AE75B620020D7C6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		88987BFF2AE75B640020D7C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		88987C022AE75B640020D7C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		88987C042AE75B640020D7C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88987C4B2AE769380020D7C6 /* ComputableLayoutTestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComputableLayoutTestViewController.swift; sourceTree = "<group>"; };
+		88987C4C2AE769380020D7C6 /* ComputaleLayoutTestPresets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComputaleLayoutTestPresets.swift; sourceTree = "<group>"; };
+		88987C4D2AE769380020D7C6 /* ViewControllerBasicUsage01.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerBasicUsage01.swift; sourceTree = "<group>"; };
 		EDE5CBCE6BE87A1CBC77ABDE /* Pods-ComputableLayoutExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ComputableLayoutExample.debug.xcconfig"; path = "Target Support Files/Pods-ComputableLayoutExample/Pods-ComputableLayoutExample.debug.xcconfig"; sourceTree = "<group>"; };
 		EDFBCBC9FBEF185E3A85F043 /* Pods-ComputableLayoutExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ComputableLayoutExample.release.xcconfig"; path = "Target Support Files/Pods-ComputableLayoutExample/Pods-ComputableLayoutExample.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -51,6 +55,7 @@
 		88987BEA2AE75B620020D7C6 = {
 			isa = PBXGroup;
 			children = (
+				88987C4A2AE769380020D7C6 /* Examples */,
 				88987BF52AE75B620020D7C6 /* ComputableLayoutExample */,
 				88987BF42AE75B620020D7C6 /* Products */,
 				A9C4A1FA8D1D32339234A200 /* Pods */,
@@ -71,12 +76,22 @@
 			children = (
 				88987BF62AE75B620020D7C6 /* AppDelegate.swift */,
 				88987BF82AE75B620020D7C6 /* SceneDelegate.swift */,
-				88987BFA2AE75B620020D7C6 /* ViewController.swift */,
 				88987BFF2AE75B640020D7C6 /* Assets.xcassets */,
 				88987C012AE75B640020D7C6 /* LaunchScreen.storyboard */,
 				88987C042AE75B640020D7C6 /* Info.plist */,
 			);
 			path = ComputableLayoutExample;
+			sourceTree = "<group>";
+		};
+		88987C4A2AE769380020D7C6 /* Examples */ = {
+			isa = PBXGroup;
+			children = (
+				88987C4B2AE769380020D7C6 /* ComputableLayoutTestViewController.swift */,
+				88987C4C2AE769380020D7C6 /* ComputaleLayoutTestPresets.swift */,
+				88987C4D2AE769380020D7C6 /* ViewControllerBasicUsage01.swift */,
+			);
+			name = Examples;
+			path = ../Example/Examples;
 			sourceTree = "<group>";
 		};
 		A9C4A1FA8D1D32339234A200 /* Pods */ = {
@@ -202,8 +217,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				88987BFB2AE75B620020D7C6 /* ViewController.swift in Sources */,
+				88987C4E2AE769380020D7C6 /* ComputableLayoutTestViewController.swift in Sources */,
 				88987BF72AE75B620020D7C6 /* AppDelegate.swift in Sources */,
+				88987C502AE769380020D7C6 /* ViewControllerBasicUsage01.swift in Sources */,
+				88987C4F2AE769380020D7C6 /* ComputaleLayoutTestPresets.swift in Sources */,
 				88987BF92AE75B620020D7C6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
