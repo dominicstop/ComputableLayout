@@ -32,8 +32,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     let window = UIWindow(windowScene: windowScene);
     self.window = window;
     
-    let rootVC = UIViewController();
-    rootVC.view.backgroundColor = .white;
+    let rootVC = ComputableLayoutTestViewController();
     
     window.rootViewController = rootVC;
     window.makeKeyAndVisible();
