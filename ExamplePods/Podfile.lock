@@ -1,7 +1,7 @@
 PODS:
-  - ComputableLayout (0.4.0):
-    - DGSwiftUtilities (~> 0)
-  - DGSwiftUtilities (0.1.0)
+  - ComputableLayout (0.5.0):
+    - DGSwiftUtilities (~> 0.8)
+  - DGSwiftUtilities (0.8.1)
 
 DEPENDENCIES:
   - ComputableLayout (from `../`)
@@ -15,9 +15,9 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  ComputableLayout: 6c3b24edd76d1ecf6bd3a6809a2430ad077c13a2
-  DGSwiftUtilities: e04f2c8a6782592c09be299c411749ebfc4b1cc2
+  ComputableLayout: 93ec2450a986638f01f31959473ffccef04d13cc
+  DGSwiftUtilities: 16e0deb9b43c1807cc06761bfd27b22d6c790311
 
 PODFILE CHECKSUM: 5f926b14fcfd4a0e94e3a10ded5c86749359e196
 
-COCOAPODS: 1.12.0
+COCOAPODS: 1.14.2
