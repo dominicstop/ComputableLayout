@@ -16,5 +16,5 @@ Pod::Spec.new do |s|
   
   s.frameworks = 'UIKit'
 
-  s.source_files = 'Sources/ComputableLayout/**/*'
+  s.source_files = 'Sources/**/*'
 end

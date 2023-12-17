@@ -26,6 +26,7 @@ let package = Package(
       dependencies: [
         "DGSwiftUtilities"
       ],
+      path: "Sources",
       linkerSettings: [
 				.linkedFramework("UIKit"),
 			]
