@@ -12,7 +12,7 @@ public struct ComputableLayoutValue: Equatable {
   // MARK: - Types
   // -------------
 
-  public enum Axis: Equatable {
+  public enum Axis: String, Equatable, CaseIterable {
     case horizontal, vertical;
   };
   
