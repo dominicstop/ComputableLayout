@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum ComputableLayoutOffsetOperation: String {
+public enum ComputableLayoutOffsetOperation: String, CaseIterable {
   case multiply, divide, add, subtract;
   
   public func compute(a: Double, b: Double) -> Double {

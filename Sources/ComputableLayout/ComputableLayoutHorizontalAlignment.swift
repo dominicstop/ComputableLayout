@@ -8,6 +8,6 @@
 import Foundation
 import DGSwiftUtilities
 
-public enum ComputableLayoutHorizontalAlignment: String, Equatable {
+public enum ComputableLayoutHorizontalAlignment: String, Equatable, CaseIterable {
   case left, right, center;
 };
