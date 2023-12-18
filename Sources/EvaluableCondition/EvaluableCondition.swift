@@ -12,11 +12,7 @@ public indirect enum EvaluableCondition: Equatable {
 
   // MARK: - Embedded Types
   // ----------------------
-  
-  
 
-  
-  
   // Mirrors: `UIUserInterfaceStyle`
   public enum UserInterfaceStyle: CaseIterable, Equatable {
     case unspecified;
@@ -92,25 +88,6 @@ public indirect enum EvaluableCondition: Equatable {
       
       guard let match = match else { return nil };
       self = match;
-    };
-  };
-  
-  public enum StringComparisonMode: Equatable {
-    case contains, matches;
-    
-    func evaluate(a: String, b: String, isCaseSensitive: Bool) -> Bool {
-      let stringA = isCaseSensitive
-       ? a
-       : a.lowercased();
-       
-      let stringB = isCaseSensitive
-       ? b
-       : b.lowercased();
-       
-       switch self {
-         case .contains: return stringA.contains(stringB)
-         case .matches : return stringA == stringB;
-       };
     };
   };
   
