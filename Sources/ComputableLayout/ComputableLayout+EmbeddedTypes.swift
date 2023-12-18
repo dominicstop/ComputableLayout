@@ -10,4 +10,5 @@ import Foundation
 public extension ComputableLayout {
 
   typealias HorizontalAlignment = ComputableLayoutHorizontalAlignment;
+  typealias VerticalAlignment = ComputableLayoutVerticalAlignment;
 };

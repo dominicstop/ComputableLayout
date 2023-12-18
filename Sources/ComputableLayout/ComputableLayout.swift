@@ -16,13 +16,6 @@ public struct ComputableLayout: Equatable {
     width: .constant(0),
     height: .constant(0)
   );
-
-  // MARK: - Public Types
-  // --------------------
-  
-  public enum VerticalAlignment: String, Equatable {
-    case top, bottom, center;
-  };
   
   // MARK: - Properties
   // ------------------
