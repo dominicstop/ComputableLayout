@@ -8,16 +8,6 @@
 import UIKit
 
 public struct ComputableLayoutValue: Equatable {
-
-  // MARK: - Types
-  // -------------
-
-  public enum Axis: String, Equatable, CaseIterable {
-    case horizontal, vertical;
-  };
-  
-  // MARK: - Properties
-  // ------------------
   
   public let mode: ComputableLayoutValueMode;
   
