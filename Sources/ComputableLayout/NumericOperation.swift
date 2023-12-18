@@ -1,5 +1,5 @@
 //
-//  ComputableLayoutOffsetOperation.swift
+//  NumericOperation.swift
 //
 //
 //  Created by Dominic Go on 12/19/23.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum ComputableLayoutOffsetOperation: String, CaseIterable {
+public enum NumericOperation: String, CaseIterable {
   case multiply, divide, add, subtract;
   
   public func compute(a: Double, b: Double) -> Double {

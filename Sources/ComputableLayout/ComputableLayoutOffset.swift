@@ -10,7 +10,7 @@ import Foundation
 public struct ComputableLayoutOffset {
 
   public var offset: Double;
-  public var offsetOperation: ComputableLayoutOffsetOperation;
+  public var offsetOperation: NumericOperation;
   
   public func compute(
     withValue value: Double,
