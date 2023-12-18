@@ -10,4 +10,5 @@ import Foundation
 public extension EvaluableCondition {
   
   typealias FrameRectValue = EvaluableConditionFrameRectValue;
+  typealias SizeValue = EvaluableConditionSizeValue;
 };
