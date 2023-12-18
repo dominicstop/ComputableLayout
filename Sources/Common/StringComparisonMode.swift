@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum StringComparisonMode: Equatable {
+public enum StringComparisonMode: String, CaseIterable {
   case contains, matches;
   
   func evaluate(a: String, b: String, isCaseSensitive: Bool) -> Bool {
