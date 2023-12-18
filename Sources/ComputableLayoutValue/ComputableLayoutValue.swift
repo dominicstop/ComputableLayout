@@ -22,7 +22,7 @@ public struct ComputableLayoutValue: Equatable {
   public let mode: ComputableLayoutValueMode;
   
   public let offsetValue: ComputableLayoutValueMode?;
-  public let offsetOperation: ComputableLayoutOffset.OffsetOperation?;
+  public let offsetOperation: ComputableLayoutOffsetOperation?;
 
   public let minValue: ComputableLayoutValueMode?;
   public let maxValue: ComputableLayoutValueMode?;
@@ -33,7 +33,7 @@ public struct ComputableLayoutValue: Equatable {
   public init(
     mode: ComputableLayoutValueMode,
     offsetValue: ComputableLayoutValueMode? = nil,
-    offsetOperation: ComputableLayoutOffset.OffsetOperation? = nil,
+    offsetOperation: ComputableLayoutOffsetOperation? = nil,
     minValue: ComputableLayoutValueMode? = nil,
     maxValue: ComputableLayoutValueMode? = nil
   ) {

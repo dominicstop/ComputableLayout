@@ -9,28 +9,8 @@ import Foundation
 
 public struct ComputableLayoutOffset {
 
-  public enum OffsetOperation: String {
-    case multiply, divide, add, subtract;
-    
-    public func compute(a: Double, b: Double) -> Double {
-      switch self {
-        case .add:
-          return a + b;
-          
-        case .divide:
-          return a / b;
-          
-        case .multiply:
-          return a * b;
-          
-        case .subtract:
-          return a - b;
-      };
-    };
-  };
-  
   public var offset: Double;
-  public var offsetOperation: OffsetOperation;
+  public var offsetOperation: ComputableLayoutOffsetOperation;
   
   public func compute(
     withValue value: Double,

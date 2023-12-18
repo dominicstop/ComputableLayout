@@ -13,7 +13,7 @@ public extension ComputableLayoutValue {
   
   static func stretch(
     offsetValue: ComputableLayoutValueMode? = nil,
-    offsetOperation: ComputableLayoutOffset.OffsetOperation? = nil,
+    offsetOperation: ComputableLayoutOffsetOperation? = nil,
     minValue: ComputableLayoutValueMode? = nil,
     maxValue: ComputableLayoutValueMode? = nil
   ) -> Self {
@@ -35,7 +35,7 @@ public extension ComputableLayoutValue {
     relativeTo: ComputableLayoutValuePercentTarget = .targetSize,
     percentValue: Double,
     offsetValue: ComputableLayoutValueMode? = nil,
-    offsetOperation: ComputableLayoutOffset.OffsetOperation? = nil,
+    offsetOperation: ComputableLayoutOffsetOperation? = nil,
     minValue: ComputableLayoutValueMode? = nil,
     maxValue: ComputableLayoutValueMode? = nil
   ) -> Self {
@@ -55,7 +55,7 @@ public extension ComputableLayoutValue {
   static func safeAreaInsets(
     insetKey: KeyPath<UIEdgeInsets, CGFloat>,
     offsetValue: ComputableLayoutValueMode? = nil,
-    offsetOperation: ComputableLayoutOffset.OffsetOperation? = nil,
+    offsetOperation: ComputableLayoutOffsetOperation? = nil,
     minValue: ComputableLayoutValueMode? = nil,
     maxValue: ComputableLayoutValueMode? = nil
   ) -> Self {
@@ -72,7 +72,7 @@ public extension ComputableLayoutValue {
   static func keyboardScreenRect(
     rectKey: KeyPath<CGRect, CGFloat>,
     offsetValue: ComputableLayoutValueMode? = nil,
-    offsetOperation: ComputableLayoutOffset.OffsetOperation? = nil,
+    offsetOperation: ComputableLayoutOffsetOperation? = nil,
     minValue: ComputableLayoutValueMode? = nil,
     maxValue: ComputableLayoutValueMode? = nil
   ) -> Self {
@@ -89,7 +89,7 @@ public extension ComputableLayoutValue {
   static func keyboardRelativeSize(
     sizeKey: KeyPath<CGSize, CGFloat>,
     offsetValue: ComputableLayoutValueMode? = nil,
-    offsetOperation: ComputableLayoutOffset.OffsetOperation? = nil,
+    offsetOperation: ComputableLayoutOffsetOperation? = nil,
     minValue: ComputableLayoutValueMode? = nil,
     maxValue: ComputableLayoutValueMode? = nil
   ) -> Self {
@@ -106,7 +106,7 @@ public extension ComputableLayoutValue {
   static func multipleValues(
     _ values: [ComputableLayoutValueMode],
     offsetValue: ComputableLayoutValueMode? = nil,
-    offsetOperation: ComputableLayoutOffset.OffsetOperation? = nil,
+    offsetOperation: ComputableLayoutOffsetOperation? = nil,
     minValue: ComputableLayoutValueMode? = nil,
     maxValue: ComputableLayoutValueMode? = nil
   ) -> Self {
@@ -125,7 +125,7 @@ public extension ComputableLayoutValue {
     trueValue: ComputableLayoutValueMode?,
     falseValue: ComputableLayoutValueMode? = nil,
     offsetValue: ComputableLayoutValueMode? = nil,
-    offsetOperation: ComputableLayoutOffset.OffsetOperation? = nil,
+    offsetOperation: ComputableLayoutOffsetOperation? = nil,
     minValue: ComputableLayoutValueMode? = nil,
     maxValue: ComputableLayoutValueMode? = nil
   ) -> Self {
@@ -148,7 +148,7 @@ public extension ComputableLayoutValue {
     trueValue: ComputableLayoutValueMode?,
     falseValue: ComputableLayoutValueMode? = nil,
     offsetValue: ComputableLayoutValueMode? = nil,
-    offsetOperation: ComputableLayoutOffset.OffsetOperation? = nil,
+    offsetOperation: ComputableLayoutOffsetOperation? = nil,
     minValue: ComputableLayoutValueMode? = nil,
     maxValue: ComputableLayoutValueMode? = nil
   ) -> Self {
