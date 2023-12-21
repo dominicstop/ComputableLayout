@@ -7,7 +7,7 @@
 
 import UIKit
 
-public enum ComputableLayoutValuePercentTarget {
+public enum ComputableLayoutValuePercentTarget: String, CaseIterable {
 
   case screenSize , screenWidth , screenHeight;
   case windowSize , windowWidth , windowHeight;
